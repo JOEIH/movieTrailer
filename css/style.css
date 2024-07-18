@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 배경동영상 */
+.vid {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: -30px;
+}
+.vid video {
+    width: 100%;
+    min-width: 1600px;
+    transform: scale(1.1);
+}
+
+/*로고*/
+#logo {
+    z-index: 100;
+    color: rgb(167, 32, 32);
+    font-family: "Noto Serif JP", serif;
+}
+.logo1 {
+    position: fixed;
+    top: 40px;
+    transform: translateX(30px);
+    font-size: 100px;
+}
+.logo2 {
+    position: fixed;
+    top: 90px;
+    transform: translateX(120px);
+    font-size: 90px;
+}
+/*header*/
+header {
+    background: rgba(0, 0, 0, 0.162);
+    position: fixed;
+    width: 700px;
+    height: 100%;
+    left: -500px;
+}
+header:hover {
+    background: rgba(0, 0, 0, 0.814);
+    left: -310px;
+}
+
+/* 1depth*/
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    outline: 0; /*알아보기*/
+    color: #aeaeae;
+}
+#gnb {
+    width: 170px;
+    position: absolute;
+    top: 300px;
+    right: 0px;
+}
+
+#gnb > li {
+    position: relative;
+
+}
+
+#gnb > li > a {
+    display: block;
+    width: 170px;
+    height: 50px;
+    margin-top: 15px;
+    text-decoration: none;
+    font: 16px/3.3 bold;
+    text-align: right;
+    box-sizing: border-box; /*찾아보기*/
+    padding-right: 30px;
+}
+
+#gnb > li.on > a {
+    color: white;
+    background: rgba(167, 32, 32, 0.677)
+}
+
+#gnb > li:hover > a {
+    border-bottom: none;
+    background: rgba(167, 32, 32, 0.677);
+    transform: scale(1.1);
+    color: white;
+    width: 190px;
+    transform: skewX(-20deg);
+    right: -50px;
+}
+
+#gnb em {
+    display: inline-block;
+}
+#gnb em i {
+    margin-right: 30px;
+    text-shadow: 3px 3px 3px black;
+}
+
+/* 2depth */
+#gnb ul {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.4s;
+}
+#gnb > li:hover ul {
+    opacity: 0.8;
+    left: 185px;
+}
+#gnb ul a {
+    display: block;
+    width: 150px;
+    height: 55px;
+    background-color: rgba(2, 79, 2, 0.581);
+    border-bottom: 1px solid white;
+    font: bold 16px/3.3;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    text-align: center;
+    line-height: 55px;
+    transform: skew(-20deg);
+}
+#gnb ul a:hover {
+    background-color: rgba(0, 33, 0, 0.893);
+    color: white;
+}
+
+/* sns 버튼 모음*/
+#sns {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+}
+#sns li {
+    float: left;
+    margin-right: 30px;
+}
+#sns .fa {
+    font-size: 25px;
+    opacity: 0.5;
+    transform: scale(1);
+    transition: all 0.5s;
+    color: rgb(75, 75, 75);
+}
+#sns .fa:hover {
+    opacity: 1;
+    transform: scale(1.5);
+    color: rgb(167, 32, 32);
+}
+/* 텍스트 박스 */
+.txtBox {
+    width: 340px;
+    height: 280px;
+    position: fixed;
+    top: 250px;
+    right: 70px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.txt {
+    text-align: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 65px;
+    color: black;
+    padding-right: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.557);
+}
+.tit {
+    position: absolute;
+    top: 160px;
+    right: 0;
+    font-size: 30px;
+    color: black;
+    letter-spacing: -2px;
+    padding-right: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.557);
+}
+
+/* contents 레이아웃 */
+#side {
+    width: 900px;
+    height: 200px;
+    position: fixed;
+    bottom: 70px;
+    background: #242424;
+    transform: all 0.6s;
+    right: -830px;
+    border-radius: 45px;
+    opacity: 0.8;
+    z-index: 1;
+}
+#side .con {
+    width: 900px;
+    height: 180px;
+    position: absolute;
+    left: 150px;
+    top: 10px;
+    bottom: 0;
+    background: #000000;
+    box-sizing: border-box;
+    padding: 10px;
+    transition: all 1s;
+    z-index: 100;
+}
+#side:hover .con {
+    left: -800px;
+}
+
+/* contents내 썸네일 */
+#side .con p {
+    float: left;
+    margin-right: 10px;
+    width: 250px;
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+}
+img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+/* 자동롤링 버튼*/
+#side .btnContents {
+    top: 75px;
+    left: 13px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    color: white;
+}
+.btnContents i {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    z-index: 10;
+}
