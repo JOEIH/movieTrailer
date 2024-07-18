@@ -1,8 +1,8 @@
 # movieTrailer
 https://joeih.github.io/movieTrailer/
 1. 동영상 자동재생 안 되는 문제
-   a. autoplay muted 실패
-   b. autoplay muted playsinline 실패
+   a. autoplay muted 실패<br>
+   b. autoplay muted playsinline 실패<br>
    c. 사파리에서는 자동재생 되는데 크롬에서는 안 됨
 2. font-awesome 아이콘 안 보이는 문제 -> 버전 바꿔서 해결
 
